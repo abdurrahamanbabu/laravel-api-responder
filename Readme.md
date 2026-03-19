@@ -16,9 +16,10 @@ composer require abdur-rahaman/laravel-api-responder
 
 ##You can use the package via the helper function.
 
-use Illuminate\Http\Request;
+
 
 ```
+use Illuminate\Http\Request;
 Route::get('/api/test', function(Request $request) {
     return responder()->success([
         'message' => 'API Responder is working!',
