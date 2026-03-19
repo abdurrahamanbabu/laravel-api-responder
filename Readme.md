@@ -12,11 +12,13 @@ Install via Composer:
 ```bash
 composer require abdur-rahaman/laravel-api-responder
 
+```
 
-You can use the package via the helper function or the Facade.
+##You can use the package via the helper function.
 
 use Illuminate\Http\Request;
 
+```
 Route::get('/api/test', function(Request $request) {
     return responder()->success([
         'message' => 'API Responder is working!',
@@ -28,8 +30,5 @@ responder()->success($data, $message = null, $statusCode = 200);
 responder()->error($message = 'Something went wrong', $statusCode = 400, $errors = []);
 responder()->paginate($data, $message = null, $statusCode = 200);
 
-use AbdurRahaman\LaravelApiResponder\Facades\ApiResponder;
+```
 
-Route::get('/api/facade-test', function() {
-    return ApiResponder::success(['foo' => 'bar'], 'Success message');
-});
